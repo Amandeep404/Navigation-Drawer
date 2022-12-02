@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    >
+    <group
+        android:id="@+id/menuTop"
+        android:checkableBehavior="single"
+        >
+        <item android:id="@+id/navHome"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="Home"/>
+        <item android:id="@+id/navRecent"
+            android:icon="@drawable/ic_baseline_access_time_24"
+            android:title="Recents"/>
+        <item
+            android:id="@+id/navFavorites"
+            android:icon="@drawable/ic_baseline_favorite_border_24"
+            android:title="Favourites" />
+
+    </group>
+    <group
+        android:id="@+id/menuBottom"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/navArchive"
+            android:icon="@drawable/ic_baseline_archive_24"
+            android:title="Archive" />
+        <item
+            android:id="@+id/navBin"
+            android:icon="@drawable/ic_baseline_delete_24"
+            android:title="Delete" />
+    </group>
+
+</menu>

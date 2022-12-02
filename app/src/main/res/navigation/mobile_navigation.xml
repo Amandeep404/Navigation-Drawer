@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navHome">
+    <fragment
+        android:id="@+id/navHome"
+        android:name="com.example.navigationdrawer.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home"
+        >
+        <action
+            android:id="@+id/navHomeToContent"
+            app:destination="@+id/navContent"
+            app:popUpTo="@id/navHome" />
+    </fragment>
+
+    <fragment android:id="@+id/navContent"
+        android:name="com.example.navigationdrawer.ContentFragment"
+        android:label="content"
+        tools:layout="@layout/fragment_content"
+        />
+
+    <fragment android:id="@+id/navRecent"
+        android:name="com.example.navigationdrawer.RecentFragment"
+        tools:layout="@layout/fragment_recent"
+        android:label="Recent"
+        />
+    <fragment
+        android:id="@+id/navFavourites"
+        android:name="com.example.navigationdrawer.FavouritesFragment"
+        tools:layout="@layout/fragment_favourites"
+        android:label="favourites"
+        />
+    <fragment
+        android:id="@+id/navArchive"
+        android:name="com.example.navigationdrawer.ArchiveFragment"
+        android:label="archive"
+        tools:layout="@layout/fragment_archive" >
+        <action
+            android:id="@+id/action_navArchive_self"
+            app:destination="@id/navArchive" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navBin"
+        android:name="com.example.navigationdrawer.BinFragment"
+        android:label="bin"
+        tools:layout="@layout/fragment_archive" />
+
+    <fragment
+        android:id="@+id/navSettings"
+        android:name="com.example.navigationdrawer.SettingsFragment"
+        android:label="settings"
+        tools:layout="@layout/fragment_settings" />
+
+</navigation>
